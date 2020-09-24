@@ -7,7 +7,7 @@ function App() {
       <div className="title">Popup Widgets</div>
       {[...Array(10).keys()].map((i) => (
         <div className="widget-info">
-          <button>Popup {i}</button>
+          <button>Popup {i + 1}</button>
           <div>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
             minus.
