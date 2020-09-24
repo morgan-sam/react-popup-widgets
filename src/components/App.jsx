@@ -1,7 +1,12 @@
 import React from "react";
+import "css/app.css";
 
 function App() {
-  return <div className="App">Popup Widgets</div>;
+  return (
+    <div className="page">
+      <div className="title">Popup Widgets</div>
+    </div>
+  );
 }
 
 export default App;

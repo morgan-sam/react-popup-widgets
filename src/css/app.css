@@ -1,0 +1,12 @@
+.page {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  text-decoration: underline;
+  font-size: 2rem;
+}
