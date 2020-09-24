@@ -10,11 +10,12 @@
 .title {
   text-decoration: underline;
   font-size: 2rem;
+  margin: 2rem;
 }
 
 .widget-info {
   display: flex;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .widget-info > * {
