@@ -1,5 +1,6 @@
 import React from "react";
 import "css/app.css";
+import Popup from "./Popup.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           </div>
         </div>
       ))}
+      <Popup />
     </div>
   );
 }
