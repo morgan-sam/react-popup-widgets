@@ -2,7 +2,6 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  border: 1px solid black;
   margin: 2rem;
   opacity: 0;
   transform: translateY(100%);
@@ -11,7 +10,7 @@
   width: 14rem;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 15px 2px #eee;
+  box-shadow: 0 0 10px 2px #eee;
 }
 .popup-header {
   font-size: 1rem;
