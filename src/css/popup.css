@@ -4,6 +4,15 @@
   bottom: 0;
   border: 1px solid black;
   font-size: 2rem;
-  padding: 2rem;
-  margin: 1rem;
+  padding: 4rem;
+  margin: 2rem;
+  opacity: 0;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+
+.open {
+  transform: translateY(0%);
+  opacity: 1;
 }
