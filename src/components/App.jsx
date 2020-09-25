@@ -8,6 +8,13 @@ function App() {
   const [widgetsOpen, setWidgetsOpen] = useState(
     new Array(noOfWidgets).fill(false)
   );
+
+  const togglePopup = (i) => {
+    let newArr = [...widgetsOpen];
+    newArr[i] = !widgetsOpen[i];
+    setWidgetsOpen(newArr);
+  };
+
   return (
     <div className="page">
       <div className="title">Popup Widgets</div>
@@ -15,11 +22,7 @@ function App() {
         <div className="widget-info">
           <button
             className={`btn ${widgetsOpen[i] ? "enabled" : ""}`}
-            onClick={() => {
-              let newArr = [...widgetsOpen];
-              newArr[i] = !widgetsOpen[i];
-              setWidgetsOpen(newArr);
-            }}
+            onClick={() => togglePopup(i)}
           >
             Popup {i + 1}
           </button>
@@ -33,6 +36,7 @@ function App() {
             text={
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, minus."
             }
+            closePopup={() => togglePopup(i)}
           />
         </div>
       ))}
