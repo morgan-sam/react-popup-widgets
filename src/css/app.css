@@ -37,7 +37,7 @@
 
 .btn:focus {
   outline: 0;
-  box-shadow: 0 0 8px rgb(76, 154, 190);
+  box-shadow: 0 0 0 5px rgb(76, 154, 190);
 }
 
 .enabled {
