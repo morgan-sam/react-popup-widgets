@@ -14,7 +14,7 @@ function App() {
       {[...Array(noOfWidgets).keys()].map((i) => (
         <div className="widget-info">
           <button
-            className="btn"
+            className={`btn ${widgetsOpen[i] ? "enabled" : ""}`}
             onClick={() => {
               let newArr = [...widgetsOpen];
               newArr[i] = !widgetsOpen[i];

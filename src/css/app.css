@@ -39,3 +39,7 @@
   outline: 0;
   box-shadow: 0 0 8px rgb(76, 154, 190);
 }
+
+.enabled {
+  background-color: rgb(207, 245, 226);
+}
