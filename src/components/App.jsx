@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "css/app.css";
 import Popup from "./Popup.jsx";
 
-const noOfWidgets = 6;
+const noOfWidgets = 5;
 
 function App() {
   const [widgetsOpen, setWidgetsOpen] = useState(
@@ -15,11 +15,11 @@ function App() {
         <div className="widget-info">
           <button
             className="btn"
-            // onClick={() => {
-            //   let newArr = [...widgetsOpen];
-            //   newArr[i] = !widgetsOpen[i];
-            //   setWidgetsOpen(newArr);
-            // }}
+            onClick={() => {
+              let newArr = [...widgetsOpen];
+              newArr[i] = !widgetsOpen[i];
+              setWidgetsOpen(newArr);
+            }}
           >
             Popup {i + 1}
           </button>
