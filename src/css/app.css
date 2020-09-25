@@ -15,9 +15,27 @@
 
 .widget-info {
   display: flex;
+  align-items: center;
   margin: 1rem;
 }
 
 .widget-info > * {
   margin: 0.5rem;
+}
+
+.btn {
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid #eee;
+  box-shadow: rgb(199, 199, 199) 2px 4px;
+}
+
+.btn:active {
+  top: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 8px rgb(76, 154, 190);
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "css/app.css";
 import Popup from "./Popup.jsx";
 
-const noOfWidgets = 10;
+const noOfWidgets = 6;
 
 function App() {
   const [widgetsOpen, setWidgetsOpen] = useState(
@@ -14,11 +14,12 @@ function App() {
       {[...Array(noOfWidgets).keys()].map((i) => (
         <div className="widget-info">
           <button
-            onClick={() => {
-              let newArr = [...widgetsOpen];
-              newArr[i] = !widgetsOpen[i];
-              setWidgetsOpen(newArr);
-            }}
+            className="btn"
+            // onClick={() => {
+            //   let newArr = [...widgetsOpen];
+            //   newArr[i] = !widgetsOpen[i];
+            //   setWidgetsOpen(newArr);
+            // }}
           >
             Popup {i + 1}
           </button>
