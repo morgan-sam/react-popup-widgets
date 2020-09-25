@@ -29,6 +29,7 @@
   border-radius: 1rem;
   border: 1px solid #eee;
   box-shadow: rgb(199, 199, 199) 2px 4px;
+  transition: background-color 0.4s;
 }
 
 .btn:active {
