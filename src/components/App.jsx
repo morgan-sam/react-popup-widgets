@@ -27,7 +27,13 @@ function App() {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
             minus.
           </div>
-          <Popup open={widgetsOpen[i]} text={`Popup #${i + 1}`} />
+          <Popup
+            open={widgetsOpen[i]}
+            header={`Popup #${i + 1}`}
+            text={
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, minus."
+            }
+          />
         </div>
       ))}
     </div>

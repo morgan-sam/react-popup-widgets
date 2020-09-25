@@ -3,13 +3,29 @@
   right: 0;
   bottom: 0;
   border: 1px solid black;
-  font-size: 2rem;
-  padding: 4rem;
   margin: 2rem;
   opacity: 0;
   transform: translateY(100%);
   opacity: 0;
   transition: 0.5s ease-out;
+  width: 14rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 2px #eee;
+}
+.popup-header {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(58, 12, 58);
+  color: white;
+  padding: 1rem;
+}
+
+.popup-body {
+  font-size: 1rem;
+  padding: 2rem;
+  line-height: 1.5rem;
 }
 
 .open {
