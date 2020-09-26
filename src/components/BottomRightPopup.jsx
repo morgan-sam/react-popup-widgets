@@ -1,5 +1,5 @@
 import React from "react";
-import "css/popup.css";
+import "css/bottomRightPopup.css";
 
 const BottomRightPopup = (props) => {
   const { open, header, text, closePopup } = props;
