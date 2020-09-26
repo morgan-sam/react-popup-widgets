@@ -10,6 +10,15 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  box-sizing: border-box;
+}
+
+.top-banner.open {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .top-banner-close-btn {
