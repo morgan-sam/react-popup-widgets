@@ -5,7 +5,7 @@ const Popup = (props) => {
   console.log(props);
   const { open, header, text, closePopup } = props;
   return (
-    <div className={`bottom-right-popup ${open ? "open" : ""}`}>
+    <div className={`popup ${open ? "open" : ""}`}>
       <div className="header">
         <span>{header}</span>
         <button className="close-button" onClick={closePopup}>
