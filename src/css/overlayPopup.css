@@ -1,0 +1,21 @@
+.overlay-popup-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  z-index: -5;
+  transition: background-color 0.5s ease-out, z-index 0s 0.5s;
+}
+
+.overlay-popup-container.open {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  transition: background-color 0.5s ease-out, z-index 0s 0s;
+}

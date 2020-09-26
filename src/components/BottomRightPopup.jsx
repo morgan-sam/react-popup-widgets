@@ -1,17 +1,12 @@
 import React from "react";
+import Popup from "./Popup";
 import "css/bottomRightPopup.css";
 
 const BottomRightPopup = (props) => {
-  const { open, header, text, closePopup } = props;
+  const { open } = props;
   return (
-    <div className={`bottom-right-popup ${open ? "open" : ""}`}>
-      <div className="header">
-        <span>{header}</span>
-        <button className="close-button" onClick={closePopup}>
-          <div className="close-icon" />
-        </button>
-      </div>
-      <div className="body">{text}</div>
+    <div className={`bottom-right-popup-container ${open ? "open" : ""}`}>
+      <Popup {...props} />
     </div>
   );
 };

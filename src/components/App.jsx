@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "css/app.css";
-import BottomRightPopup from "./BottomRightPopup.jsx";
-import TopBanner from "./TopBanner.jsx";
-const widgets = [BottomRightPopup, TopBanner];
+import BottomRightPopup from "components/BottomRightPopup.jsx";
+import TopBanner from "components/TopBanner.jsx";
+import OverlayPopup from "components/OverlayPopup.jsx";
+
+const widgets = [BottomRightPopup, TopBanner, OverlayPopup];
 
 function App() {
   const [widgetsOpen, setWidgetsOpen] = useState(
