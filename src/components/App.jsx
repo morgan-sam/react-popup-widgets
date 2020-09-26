@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "css/app.css";
-import Popup from "./Popup.jsx";
-
-const noOfWidgets = 5;
+import BottomRightPopup from "./BottomRightPopup.jsx";
+const widgets = [BottomRightPopup];
 
 function App() {
   const [widgetsOpen, setWidgetsOpen] = useState(
-    new Array(noOfWidgets).fill(false)
+    new Array(widgets.length).fill(false)
   );
 
   const togglePopup = (i) => {
@@ -18,7 +17,7 @@ function App() {
   return (
     <div className="page">
       <div className="title">Popup Widgets</div>
-      {[...Array(noOfWidgets).keys()].map((i) => (
+      {[...Array(widgets.length).keys()].map((i) => (
         <div className="widget-info">
           <button
             className={`btn ${widgetsOpen[i] ? "enabled" : ""}`}
@@ -30,14 +29,21 @@ function App() {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
             minus.
           </div>
-          <Popup
+          {React.createElement(widgets[i], {
+            open: widgetsOpen[i],
+            header: `Popup #${i + 1}`,
+            text:
+              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, minus.",
+            closePopup: () => togglePopup(i),
+          })}
+          {/* <BottomRightPopup
             open={widgetsOpen[i]}
             header={`Popup #${i + 1}`}
             text={
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, minus."
             }
             closePopup={() => togglePopup(i)}
-          />
+          /> */}
         </div>
       ))}
     </div>

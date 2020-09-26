@@ -1,7 +1,7 @@
 import React from "react";
 import "css/popup.css";
 
-const Popup = (props) => {
+const BottomRightPopup = (props) => {
   const { open, header, text, closePopup } = props;
   return (
     <div className={`popup ${open ? "open" : ""}`}>
@@ -16,4 +16,4 @@ const Popup = (props) => {
   );
 };
 
-export default Popup;
+export default BottomRightPopup;
