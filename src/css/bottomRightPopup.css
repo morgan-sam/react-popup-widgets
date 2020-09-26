@@ -1,9 +1,9 @@
 .bottom-right-popup-container {
-  width: 100vw;
-  height: 100vh;
+  width: fit-content;
+  height: fit-content;
   position: absolute;
-  left: 0;
-  top: 0;
+  bottom: 0;
+  right: 0;
   z-index: -10;
   overflow: hidden;
   margin: 0;
@@ -12,10 +12,4 @@
 
 .bottom-right-popup-container.open {
   z-index: 5;
-}
-
-.bottom-right-popup-container > * {
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
