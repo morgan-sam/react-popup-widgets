@@ -7,6 +7,7 @@ const TopBanner = (props) => {
     <div className="top-banner">
       <div>Top Banner</div>
       <div>{text}</div>
+      <button className="top-banner-close-btn"></button>
     </div>
   );
 };
