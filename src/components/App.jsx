@@ -36,14 +36,6 @@ function App() {
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, minus.",
             closePopup: () => togglePopup(i),
           })}
-          {/* <BottomRightPopup
-            open={widgetsOpen[i]}
-            header={`Popup #${i + 1}`}
-            text={
-              "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, minus."
-            }
-            closePopup={() => togglePopup(i)}
-          /> */}
         </div>
       ))}
     </div>
