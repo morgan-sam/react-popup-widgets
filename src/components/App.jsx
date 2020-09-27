@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "css/app.css";
+
+import ToggleButton from "components/ToggleButton.jsx";
 import BottomRightPopup from "components/BottomRightPopup.jsx";
 import TopBanner from "components/TopBanner.jsx";
 import OverlayPopup from "components/OverlayPopup.jsx";
@@ -10,6 +12,7 @@ function App() {
   const [widgetsOpen, setWidgetsOpen] = useState(
     new Array(widgets.length).fill(false)
   );
+  const [darkTheme, setDarkTheme] = useState(false);
 
   const togglePopup = (i) => {
     let newArr = [...widgetsOpen];
@@ -20,6 +23,11 @@ function App() {
   return (
     <div className="page">
       <div className="title">Popup Widgets</div>
+      <div>Dark Theme</div>
+      <ToggleButton
+        active={darkTheme}
+        onClick={() => setDarkTheme(!darkTheme)}
+      />
       {[...Array(widgets.length).keys()].map((i) => (
         <div className="widget-info">
           <button
