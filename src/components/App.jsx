@@ -8,6 +8,8 @@ import OverlayPopup from "components/OverlayPopup.jsx";
 
 import { toggleDarkTheme } from "js/utility";
 
+import logo from "img/sezzle_logo.png";
+
 const widgets = [BottomRightPopup, TopBanner, OverlayPopup];
 
 function App() {
@@ -28,7 +30,8 @@ function App() {
 
   return (
     <div className="page">
-      <div className="title">Popup Widgets</div>
+      <div className="title">Sezzle Popup Widgets</div>
+      <img src={logo} className="logo" />
       <div className="darktheme-label">Dark Theme</div>
       <ToggleButton
         active={darkTheme}
