@@ -1,5 +1,5 @@
 .popup {
-  background-color: white;
+  background-color: var(--background-color);
   margin: 2rem;
   opacity: 0;
   transform: translateY(100%);
@@ -9,14 +9,14 @@
   height: fit-content;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px 2px #eee;
+  box-shadow: 0 0 10px 2px var(--shadow-color);
 }
 
 .popup > .header {
   font-size: 1rem;
   display: flex;
   justify-content: center;
-  background-color: rgb(58, 12, 58);
+  background-color: var(--popup-header-color);
   color: white;
   padding: 1rem;
 }
