@@ -6,6 +6,8 @@ import BottomRightPopup from "components/BottomRightPopup.jsx";
 import TopBanner from "components/TopBanner.jsx";
 import OverlayPopup from "components/OverlayPopup.jsx";
 
+import { toggleDarkTheme } from "js/utility";
+
 const widgets = [BottomRightPopup, TopBanner, OverlayPopup];
 
 function App() {
@@ -20,10 +22,14 @@ function App() {
     setWidgetsOpen(newArr);
   };
 
+  React.useEffect(() => {
+    toggleDarkTheme(darkTheme);
+  }, [darkTheme]);
+
   return (
     <div className="page">
       <div className="title">Popup Widgets</div>
-      <div>Dark Theme</div>
+      <div className="darktheme-label">Dark Theme</div>
       <ToggleButton
         active={darkTheme}
         onClick={() => setDarkTheme(!darkTheme)}
