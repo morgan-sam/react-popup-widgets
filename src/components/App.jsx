@@ -10,7 +10,20 @@ import { toggleDarkTheme } from "js/utility";
 
 import logo from "img/sezzle_logo.png";
 
-const widgets = [BottomRightPopup, TopBanner, OverlayPopup];
+const widgets = [
+  {
+    component: BottomRightPopup,
+    description: "A small popup that appears in the bottom right corner.",
+  },
+  {
+    component: TopBanner,
+    description: "A banner that appears across the top of the screen.",
+  },
+  {
+    component: OverlayPopup,
+    description: "A popup that appears with a dark overlay across the screen.",
+  },
+];
 
 function App() {
   const [widgetsOpen, setWidgetsOpen] = useState(
@@ -45,11 +58,8 @@ function App() {
           >
             Popup {i + 1}
           </button>
-          <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
-            minus.
-          </div>
-          {React.createElement(widgets[i], {
+          <div>{widgets[i].description}</div>
+          {React.createElement(widgets[i].component, {
             open: widgetsOpen[i],
             header: `Popup #${i + 1}`,
             text:
