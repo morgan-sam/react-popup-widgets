@@ -5,6 +5,7 @@ import ToggleButton from "components/ToggleButton.jsx";
 import BottomRightPopup from "components/BottomRightPopup.jsx";
 import TopBanner from "components/TopBanner.jsx";
 import OverlayPopup from "components/OverlayPopup.jsx";
+import Chatbot from "components/Chatbot.jsx";
 
 import { toggleDarkTheme } from "js/utility";
 
@@ -23,6 +24,7 @@ const widgets = [
     component: OverlayPopup,
     description: "A popup that appears with a dark overlay across the screen.",
   },
+  { component: Chatbot, description: "A chatbot to answer customer queries." },
 ];
 
 function App() {

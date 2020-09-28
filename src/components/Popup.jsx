@@ -2,7 +2,6 @@ import React from "react";
 import "css/popup.css";
 
 const Popup = (props) => {
-  console.log(props);
   const { open, header, text, closePopup } = props;
   return (
     <div className={`popup ${open ? "open" : ""}`}>

@@ -1,0 +1,17 @@
+.chatbot-container {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  overflow: hidden;
+  margin: 0;
+  z-index: -5;
+  transition: background-color 0.5s ease-out, z-index 0s 0.5s;
+}
+
+.chatbot-container.open {
+  z-index: 5;
+  transition: background-color 0.5s ease-out, z-index 0s 0s;
+}
