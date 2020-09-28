@@ -1,8 +1,26 @@
-.chatbot {
-  text-align: center;
-}
-
 .chatbot-icon {
   width: 4rem;
   height: 4rem;
+}
+
+.conversation {
+  width: 100%;
+}
+
+.message {
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.message.bot {
+  float: left;
+  background-color: #eee;
+  color: black;
+}
+.message.user {
+  float: right;
+  background-color: rgb(118, 184, 206);
+  color: white;
 }

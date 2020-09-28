@@ -17,23 +17,36 @@ const Chatbot = (props) => {
   }, [open]);
 
   useEffect(() => {
-    if (lastActive === 1) setConversation((cur) => [...cur, "Hey!"]);
-    if (lastActive === 3) setConversation((cur) => [...cur, "What's up?"]);
+    if (lastActive === 1)
+      setConversation((cur) => [...cur, { speaker: "bot", text: "Hey!" }]);
+    if (lastActive === 3)
+      setConversation((cur) => [
+        ...cur,
+        { speaker: "bot", text: "What's up?" },
+      ]);
     if (lastActive === 6)
-      setConversation((cur) => [...cur, "Do you need help with anything?"]);
+      setConversation((cur) => [
+        ...cur,
+        { speaker: "bot", text: "Do you need help with anything?" },
+      ]);
+    if (lastActive === 9)
+      setConversation((cur) => [
+        ...cur,
+        { speaker: "user", text: "No thank you!" },
+      ]);
   }, [lastActive]);
-
-  console.log(conversation);
 
   return (
     <div className="corner-container bottom-left open">
       <div className={`popup ${open ? "open" : ""}`}>
         <PopupHeader {...{ header, closePopup }} />
-        <div className="chatbot body">
+        <div className="body">
           <img src={icon} className="chatbot-icon" />
-          {conversation.map((el) => (
-            <div>{el}</div>
-          ))}
+          <div className="conversation">
+            {conversation.map((el) => (
+              <div className={`message ${el.speaker}`}>{el.text}</div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
