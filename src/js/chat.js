@@ -1,12 +1,29 @@
-const shopperSupportTeam = {
-  text: ["Please call the support team on 202-555-0179"],
+const merchantSupportTeam = {
+  text: ["Please call the merchant support team on 202-555-0195"],
 };
-
+const shopperSupportTeam = {
+  text: ["Please call the shopper support team on 202-555-0179"],
+};
 const nothingAnswer = {
   answer: "Nothing, I am just browsing.",
   response: {
     text: ["No problem! Please click here again if you have any questions."],
   },
+};
+
+const platformGuide = (platform) => {
+  let url = null;
+  if (platform === "shopify")
+    url = "https://help.sezzle.com/merchant-shopify-settings";
+  else if (platform === "woocommerce")
+    url = "https://help.sezzle.com/sezzle-woocommerce";
+  else if (platform === "commentsold")
+    url = "https://help.sezzle.com/sezzle-commentsold";
+  else if (platform === "other")
+    url = "https://help.sezzle.com/merchant-other-platforms";
+  return {
+    text: ["Please see the following guide:", url],
+  };
 };
 
 export const chatTree = {
@@ -20,6 +37,38 @@ export const chatTree = {
           {
             answer: "I'd like to contact the sales team.",
             response: { text: ["Please call the sales team on 202-555-0109"] },
+          },
+          {
+            answer: "I need help connecting Sezzle to my ecommerce platform.",
+            response: {
+              text: ["Which ecommerce platform does your store use?"],
+              options: [
+                {
+                  answer: "Shopify",
+                  response: platformGuide("shopify"),
+                },
+                {
+                  answer: "Woocommerce",
+                  response: platformGuide("woocommerce"),
+                },
+                {
+                  answer: "CommentSold",
+                  response: platformGuide("commentsold"),
+                },
+                {
+                  answer: "Other Platform",
+                  response: platformGuide("other"),
+                },
+              ],
+            },
+          },
+          {
+            answer: "I think my account may have been hacked.",
+            response: merchantSupportTeam,
+          },
+          {
+            answer: "My issue is not listed here.",
+            response: merchantSupportTeam,
           },
           nothingAnswer,
         ],
