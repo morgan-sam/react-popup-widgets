@@ -7,7 +7,6 @@ import { chatTree } from "js/chat";
 
 const Chatbot = (props) => {
   const [lastActive, setLastActive] = useState(0);
-
   const [currentChat, setCurrentChat] = useState(chatTree);
   const [incoming, setIncoming] = useState(chatTree.text);
   const [options, setOptions] = useState([]);
@@ -15,22 +14,15 @@ const Chatbot = (props) => {
   const { open, header, closePopup } = props;
 
   useEffect(() => {
-    if (open) {
-      setInterval(() => {
-        setLastActive((time) => time + 1);
-      }, 1000);
-    }
+    if (open) setInterval(() => setLastActive((time) => time + 1), 1000);
   }, [open]);
+  useEffect(() => setIncoming(currentChat.text), [currentChat]);
 
   useEffect(() => {
-    setIncoming(currentChat.text);
-  }, [currentChat]);
-
-  useEffect(() => {
-    if (incoming.length > 0) {
+    if (incoming.length > 0 && Math.random() > 0.4) {
       setConversation((cur) => [...cur, { speaker: "bot", text: incoming[0] }]);
       setIncoming((cur) => cur.slice(1));
-    } else {
+    } else if (incoming.length === 0) {
       setOptions(currentChat.options);
     }
   }, [lastActive]);
