@@ -25,6 +25,13 @@ const Chatbot = (props) => {
     else return false;
   };
 
+  const resetChat = () => {
+    setCurrentChat(chatTree);
+    setIncoming(chatTree.text);
+    setConversation([]);
+    setOptions([]);
+  };
+
   useEffect(() => {
     const sendMessage = shouldMessageSend();
     if (sendMessage) {
@@ -76,12 +83,7 @@ const Chatbot = (props) => {
           {incoming.length === 0 && currentChat.options === undefined && (
             <button
               className={`reset-btn message option`}
-              onClick={() => {
-                setCurrentChat(chatTree);
-                setIncoming(chatTree.text);
-                setConversation([]);
-                setOptions([]);
-              }}
+              onClick={() => resetChat()}
             >
               Reset Assistant
             </button>
