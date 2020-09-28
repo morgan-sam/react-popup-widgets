@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import "css/chatbot.css";
 import PopupHeader from "components/PopupHeader";
 import icon from "img/customer-service.svg";
+import { chatTree } from "js/chat";
 
 const Chatbot = (props) => {
   const [lastActive, setLastActive] = useState(0);
+  const [incoming, setIncoming] = useState(chatTree.text);
+  const [options, setOptions] = useState(chatTree.text);
   const [conversation, setConversation] = useState([]);
-  const { open, header, text, closePopup } = props;
+  const { open, header, closePopup } = props;
 
   useEffect(() => {
     if (open) {
@@ -17,23 +20,12 @@ const Chatbot = (props) => {
   }, [open]);
 
   useEffect(() => {
-    if (lastActive === 1)
-      setConversation((cur) => [...cur, { speaker: "bot", text: "Hey!" }]);
-    if (lastActive === 3)
-      setConversation((cur) => [
-        ...cur,
-        { speaker: "bot", text: "What's up?" },
-      ]);
-    if (lastActive === 6)
-      setConversation((cur) => [
-        ...cur,
-        { speaker: "bot", text: "Do you need help with anything?" },
-      ]);
-    if (lastActive === 9)
-      setConversation((cur) => [
-        ...cur,
-        { speaker: "user", text: "No thank you!" },
-      ]);
+    if (incoming.length > 0) {
+      setConversation((cur) => [...cur, { speaker: "bot", text: incoming[0] }]);
+      setIncoming((cur) => cur.slice(1));
+    } else {
+      setOptions(chatTree.options);
+    }
   }, [lastActive]);
 
   return (
