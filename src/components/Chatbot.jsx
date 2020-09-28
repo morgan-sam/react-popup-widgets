@@ -13,11 +13,6 @@ const Chatbot = (props) => {
   const [conversation, setConversation] = useState([]);
   const { open, header, closePopup } = props;
 
-  useEffect(() => {
-    if (open) setInterval(() => setLastActive((time) => time + 1), 1000);
-  }, [open]);
-  useEffect(() => setIncoming(currentChat.text), [currentChat]);
-
   const shouldMessageSend = () => {
     if (incoming.length === 0) return false;
     else if (incoming[0].match("http") && lastActive > 0) return true;
@@ -47,6 +42,12 @@ const Chatbot = (props) => {
     setIncoming((cur) => cur.slice(1));
     setLastActive(0);
   };
+
+  useEffect(() => {
+    if (open) setInterval(() => setLastActive((time) => time + 1), 1000);
+  }, [open]);
+
+  useEffect(() => setIncoming(currentChat.text), [currentChat]);
 
   useEffect(() => {
     const sendMessage = shouldMessageSend();
