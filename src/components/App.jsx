@@ -1,18 +1,16 @@
 import React, { useState } from "react";
+
 import "css/app.css";
 import "css/containers.css";
 
-import ToggleButton from "components/ToggleButton.jsx";
+import TitleTray from "./TitleTray";
+
 import BottomRightPopup from "components/BottomRightPopup.jsx";
 import TopBanner from "components/TopBanner.jsx";
 import OverlayPopup from "components/OverlayPopup.jsx";
 import Chatbot from "components/Chatbot.jsx";
 
-import TypingAnimation from "components/TypingAnimation.jsx";
-
 import { toggleDarkTheme } from "js/utility";
-
-import logo from "img/sezzle_logo.png";
 
 const widgets = [
   {
@@ -56,12 +54,7 @@ function App() {
   return (
     <div className="page">
       <div className="title">Sezzle Popup Widgets</div>
-      <img src={logo} className="logo" />
-      <div className="darktheme-label">Dark Theme</div>
-      <ToggleButton
-        active={darkTheme}
-        onClick={() => setDarkTheme(!darkTheme)}
-      />
+      <TitleTray {...{ darkTheme, setDarkTheme }} />
       <div className="widget-info">
         {[...Array(widgets.length).keys()].map((i) => [
           <button

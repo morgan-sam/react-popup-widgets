@@ -1,0 +1,25 @@
+.title-tray {
+  display: flex;
+  width: fit-content;
+  justify-content: space-around;
+}
+
+.title-tray > * {
+  margin: 0 1rem;
+}
+
+.logo {
+  margin-bottom: 2rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.darktheme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.darktheme-label {
+  margin: 0.5rem;
+}

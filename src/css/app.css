@@ -17,16 +17,6 @@
   margin: 2rem;
 }
 
-.logo {
-  margin-bottom: 2rem;
-  width: 5rem;
-  height: 5rem;
-}
-
-.darktheme-label {
-  margin: 0.5rem;
-}
-
 .widget-info {
   display: grid;
   grid-template-columns: 10rem 1fr;
