@@ -14,6 +14,12 @@
   flex-direction: column;
 }
 
+.chat-name {
+  color: #999;
+  margin: 0 0.5rem;
+  font-size: 0.8rem;
+}
+
 .message {
   width: fit-content;
   text-align: left;

@@ -68,7 +68,9 @@ const Chatbot = (props) => {
             {conversation.map((el, i) => {
               let convoElements = [];
               if (i === 0 || conversation[i - 1].speaker !== "bot")
-                convoElements.push(<div>SezzleSupport</div>);
+                convoElements.push(
+                  <div className="chat-name">SezzleSupport</div>
+                );
               if (el.text.match("http"))
                 convoElements.push(
                   <a href={el.text} className={`message ${el.speaker}`}>
