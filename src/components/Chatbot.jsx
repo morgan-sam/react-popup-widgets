@@ -34,9 +34,16 @@ const Chatbot = (props) => {
         <div className="body">
           <img src={icon} className="chatbot-icon" />
           <div className="conversation">
-            {conversation.map((el) => (
-              <div className={`message ${el.speaker}`}>{el.text}</div>
-            ))}
+            {conversation.map((el) => {
+              if (el.text.match("http"))
+                return (
+                  <a href={el.text} className={`message ${el.speaker}`}>
+                    {el.text}
+                  </a>
+                );
+              else
+                return <div className={`message ${el.speaker}`}>{el.text}</div>;
+            })}
             {incoming.length > 0 && <TypingAnimation />}
           </div>
           {options && (
