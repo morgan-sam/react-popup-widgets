@@ -42,13 +42,16 @@ const Chatbot = (props) => {
     setOptions([]);
   };
 
+  const botSendMessage = () => {
+    setConversation((cur) => [...cur, { speaker: "bot", text: incoming[0] }]);
+    setIncoming((cur) => cur.slice(1));
+    setLastActive(0);
+  };
+
   useEffect(() => {
     const sendMessage = shouldMessageSend();
-    if (sendMessage) {
-      setConversation((cur) => [...cur, { speaker: "bot", text: incoming[0] }]);
-      setIncoming((cur) => cur.slice(1));
-      setLastActive(0);
-    } else if (incoming.length === 0) setOptions(currentChat.options);
+    if (sendMessage) botSendMessage();
+    else if (incoming.length === 0) setOptions(currentChat.options);
   }, [lastActive]);
 
   return (
