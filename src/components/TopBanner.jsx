@@ -6,7 +6,7 @@ const TopBanner = (props) => {
   return (
     <div className={`top-banner ${open ? "open" : ""}`}>
       <div>
-        Sezzle is currently hiring!:{" "}
+        Sezzle is currently hiring:{" "}
         <a href="https://sezzle.com/careers">learn more {">"}</a>
       </div>
       <div>{text}</div>
