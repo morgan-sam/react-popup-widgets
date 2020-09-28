@@ -1,5 +1,12 @@
 .chatbot {
   width: 30rem;
+  height: 50vh;
+  overflow-y: visible;
+}
+
+.chatbot > .header {
+  position: sticky;
+  top: 0;
 }
 
 .chatbot-icon {
