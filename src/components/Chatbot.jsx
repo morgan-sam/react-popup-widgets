@@ -32,6 +32,16 @@ const Chatbot = (props) => {
     setOptions([]);
   };
 
+  const userSelectOption = (option) => {
+    setConversation((cur) => [
+      ...cur,
+      { speaker: "user", text: option.answer },
+    ]);
+    setCurrentChat(option.response);
+    setLastActive(0);
+    setOptions([]);
+  };
+
   useEffect(() => {
     const sendMessage = shouldMessageSend();
     if (sendMessage) {
@@ -65,15 +75,7 @@ const Chatbot = (props) => {
               {options.map((el) => (
                 <button
                   className={`message option`}
-                  onClick={() => {
-                    setConversation((cur) => [
-                      ...cur,
-                      { speaker: "user", text: el.answer },
-                    ]);
-                    setCurrentChat(el.response);
-                    setLastActive(0);
-                    setOptions([]);
-                  }}
+                  onClick={() => userSelectOption(el)}
                 >
                   {el.answer}
                 </button>
