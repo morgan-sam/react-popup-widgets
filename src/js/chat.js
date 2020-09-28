@@ -119,7 +119,7 @@ export const chatTree = {
                     text: [
                       "Please try reseting your PIN with the following link:",
                       "https://dashboard.sezzle.com/customer/reset-pin/verify-phone",
-                      "If that does not work contact support on 202-555-0179.",
+                      "If you still cannot access your account please contact support on 202-555-0179.",
                     ],
                   },
                 },
