@@ -5,6 +5,7 @@
 .chatbot-icon {
   width: 4rem;
   height: 4rem;
+  margin: 0 0 2rem 0;
 }
 
 .conversation {
@@ -33,6 +34,7 @@
 .options {
   display: flex;
   flex-wrap: wrap;
+  margin: 2rem 0 0 0;
 }
 .option {
   text-align: center;
