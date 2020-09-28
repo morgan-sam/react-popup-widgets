@@ -65,15 +65,21 @@ const Chatbot = (props) => {
         <div className="body">
           <img src={icon} className="chatbot-icon" />
           <div className="conversation">
-            {conversation.map((el) => {
+            {conversation.map((el, i) => {
+              let convoElements = [];
+              if (i === 0 || conversation[i - 1].speaker !== "bot")
+                convoElements.push(<div>SezzleSupport</div>);
               if (el.text.match("http"))
-                return (
+                convoElements.push(
                   <a href={el.text} className={`message ${el.speaker}`}>
                     {el.text}
                   </a>
                 );
               else
-                return <div className={`message ${el.speaker}`}>{el.text}</div>;
+                convoElements.push(
+                  <div className={`message ${el.speaker}`}>{el.text}</div>
+                );
+              return convoElements;
             })}
             {incoming.length > 0 && <TypingAnimation />}
           </div>
