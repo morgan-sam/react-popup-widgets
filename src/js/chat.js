@@ -7,7 +7,9 @@ const shopperSupportTeam = {
 const nothingAnswer = {
   answer: "Nothing, I am just browsing.",
   response: {
-    text: ["No problem! Please click here again if you have any questions."],
+    text: [
+      "No problem! Please click the reset button if you have any questions.",
+    ],
   },
 };
 
