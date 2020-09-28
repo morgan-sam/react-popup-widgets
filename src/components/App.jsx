@@ -55,24 +55,24 @@ function App() {
         active={darkTheme}
         onClick={() => setDarkTheme(!darkTheme)}
       />
-      {[...Array(widgets.length).keys()].map((i) => (
-        <div className="widget-info">
+      <div className="widget-info">
+        {[...Array(widgets.length).keys()].map((i) => [
           <button
             className={`btn ${widgetsOpen[i] ? "enabled" : ""}`}
             onClick={() => togglePopup(i)}
           >
             Popup {i + 1}
-          </button>
-          <div>{widgets[i].description}</div>
-          {React.createElement(widgets[i].component, {
+          </button>,
+          <div>{widgets[i].description}</div>,
+          React.createElement(widgets[i].component, {
             open: widgetsOpen[i],
             header: `Popup #${i + 1}`,
             text:
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, minus.",
             closePopup: () => togglePopup(i),
-          })}
-        </div>
-      ))}
+          }),
+        ])}
+      </div>
     </div>
   );
 }
