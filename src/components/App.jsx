@@ -17,17 +17,24 @@ import logo from "img/sezzle_logo.png";
 const widgets = [
   {
     component: BottomRightPopup,
+    label: "Popup",
     description: "A small popup that appears in the bottom right corner.",
   },
   {
     component: TopBanner,
+    label: "Banner",
     description: "A banner that appears across the top of the screen.",
   },
   {
     component: OverlayPopup,
+    label: "Overlay",
     description: "A popup that appears with a dark overlay across the screen.",
   },
-  { component: Chatbot, description: "A chatbot to answer customer queries." },
+  {
+    component: Chatbot,
+    label: "Chatbot",
+    description: "A chatbot to answer customer queries.",
+  },
 ];
 
 function App() {
@@ -61,7 +68,7 @@ function App() {
             className={`btn ${widgetsOpen[i] ? "enabled" : ""}`}
             onClick={() => togglePopup(i)}
           >
-            Popup {i + 1}
+            {widgets[i].label}
           </button>,
           <div>{widgets[i].description}</div>,
           React.createElement(widgets[i].component, {
