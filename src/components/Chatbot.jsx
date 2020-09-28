@@ -44,7 +44,10 @@ const Chatbot = (props) => {
   };
 
   useEffect(() => {
-    if (open) setInterval(() => setLastActive((time) => time + 1), 1000);
+    if (open) {
+      const id = setInterval(() => setLastActive((time) => time + 1), 1000);
+      return () => clearInterval(id);
+    }
   }, [open]);
 
   useEffect(() => setIncoming(currentChat.text), [currentChat]);
