@@ -42,3 +42,7 @@
   border: 2px solid #666;
   cursor: pointer;
 }
+
+.reset-btn {
+  margin: 2rem 0 0 0;
+}

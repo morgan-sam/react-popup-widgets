@@ -69,7 +69,7 @@ const Chatbot = (props) => {
           )}
           {incoming.length === 0 && currentChat.options === undefined && (
             <button
-              className={`message option`}
+              className={`reset-btn message option`}
               onClick={() => {
                 setCurrentChat(chatTree);
                 setIncoming(chatTree.text);
