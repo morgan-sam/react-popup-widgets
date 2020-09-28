@@ -19,9 +19,10 @@ const Chatbot = (props) => {
   useEffect(() => setIncoming(currentChat.text), [currentChat]);
 
   useEffect(() => {
-    if (incoming.length > 0 && Math.random() > 0.4) {
+    if (incoming.length > 0 && lastActive > incoming[0].length / 18) {
       setConversation((cur) => [...cur, { speaker: "bot", text: incoming[0] }]);
       setIncoming((cur) => cur.slice(1));
+      setLastActive(0);
     } else if (incoming.length === 0) {
       setOptions(currentChat.options);
     }
@@ -46,7 +47,7 @@ const Chatbot = (props) => {
             })}
             {incoming.length > 0 && <TypingAnimation />}
           </div>
-          {options && (
+          {options && incoming.length === 0 && (
             <div className="options">
               {options.map((el) => (
                 <button
@@ -57,6 +58,7 @@ const Chatbot = (props) => {
                       { speaker: "user", text: el.answer },
                     ]);
                     setCurrentChat(el.response);
+                    setLastActive(0);
                     setOptions([]);
                   }}
                 >
