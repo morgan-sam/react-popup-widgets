@@ -1,3 +1,7 @@
+.chatbot {
+  width: 20rem;
+}
+
 .chatbot-icon {
   width: 4rem;
   height: 4rem;
@@ -23,6 +27,10 @@
   float: right;
   background-color: rgb(118, 184, 206);
   color: white;
+}
+.options {
+  display: flex;
+  flex-wrap: wrap;
 }
 .option {
   text-align: center;

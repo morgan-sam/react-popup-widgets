@@ -6,8 +6,10 @@ import { chatTree } from "js/chat";
 
 const Chatbot = (props) => {
   const [lastActive, setLastActive] = useState(0);
+
+  const [currentChat, setCurrentChat] = useState(chatTree);
   const [incoming, setIncoming] = useState(chatTree.text);
-  const [options, setOptions] = useState(chatTree.text);
+  const [options, setOptions] = useState([]);
   const [conversation, setConversation] = useState([]);
   const { open, header, closePopup } = props;
 
@@ -20,17 +22,21 @@ const Chatbot = (props) => {
   }, [open]);
 
   useEffect(() => {
+    setIncoming(currentChat.text);
+  }, [currentChat]);
+
+  useEffect(() => {
     if (incoming.length > 0) {
       setConversation((cur) => [...cur, { speaker: "bot", text: incoming[0] }]);
       setIncoming((cur) => cur.slice(1));
     } else {
-      setOptions(chatTree.options);
+      setOptions(currentChat.options);
     }
   }, [lastActive]);
 
   return (
     <div className="corner-container bottom-left open">
-      <div className={`popup ${open ? "open" : ""}`}>
+      <div className={`chatbot popup ${open ? "open" : ""}`}>
         <PopupHeader {...{ header, closePopup }} />
         <div className="body">
           <img src={icon} className="chatbot-icon" />
@@ -39,11 +45,25 @@ const Chatbot = (props) => {
               <div className={`message ${el.speaker}`}>{el.text}</div>
             ))}
           </div>
-          <div className="options">
-            {options.map((el) => (
-              <div className={`message option`}>{el.answer}</div>
-            ))}
-          </div>
+          {options && (
+            <div className="options">
+              {options.map((el) => (
+                <button
+                  className={`message option`}
+                  onClick={() => {
+                    setConversation((cur) => [
+                      ...cur,
+                      { speaker: "user", text: el.answer },
+                    ]);
+                    setCurrentChat(el.response);
+                    setOptions([]);
+                  }}
+                >
+                  {el.answer}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
