@@ -86,11 +86,13 @@ export const chatTree = {
               options: [
                 {
                   answer: "I would like a refund.",
-                  response: [
-                    "Please contact the vendor to begin the refund process.",
-                    "For more information click the following link:",
-                    "https://help.sezzle.com/shopper-returns/shopper-refund-process",
-                  ],
+                  response: {
+                    text: [
+                      "Please contact the vendor to begin the refund process.",
+                      "For more information click the following link:",
+                      "https://help.sezzle.com/shopper-returns/shopper-refund-process",
+                    ],
+                  },
                 },
                 {
                   answer: "A payment I made has not registered on my account.",
