@@ -3,7 +3,7 @@ import "css/overlayPopup.css";
 import Popup from "./Popup.jsx";
 
 const OverlayPopup = (props) => {
-  const { open, header, text, closePopup } = props;
+  const { open } = props;
   return (
     <div className={`overlay-popup-container ${open ? "open" : ""}`}>
       <Popup {...props} />

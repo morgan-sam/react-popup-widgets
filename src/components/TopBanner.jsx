@@ -2,7 +2,7 @@ import React from "react";
 import "css/topBanner.css";
 
 const TopBanner = (props) => {
-  const { open, header, text, closePopup } = props;
+  const { open, text, closePopup } = props;
   return (
     <div className={`top-banner ${open ? "open" : ""}`}>
       <div>
