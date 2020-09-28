@@ -8,6 +8,8 @@ import TopBanner from "components/TopBanner.jsx";
 import OverlayPopup from "components/OverlayPopup.jsx";
 import Chatbot from "components/Chatbot.jsx";
 
+import TypingAnimation from "components/TypingAnimation.jsx";
+
 import { toggleDarkTheme } from "js/utility";
 
 import logo from "img/sezzle_logo.png";

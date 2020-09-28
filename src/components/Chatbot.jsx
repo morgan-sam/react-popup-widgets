@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "css/chatbot.css";
 import PopupHeader from "components/PopupHeader";
+import TypingAnimation from "components/TypingAnimation";
 import icon from "img/customer-service.svg";
 import { chatTree } from "js/chat";
 
@@ -44,6 +45,7 @@ const Chatbot = (props) => {
             {conversation.map((el) => (
               <div className={`message ${el.speaker}`}>{el.text}</div>
             ))}
+            {incoming.length > 0 && <TypingAnimation />}
           </div>
           {options && (
             <div className="options">
