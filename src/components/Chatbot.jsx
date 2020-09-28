@@ -39,6 +39,11 @@ const Chatbot = (props) => {
               <div className={`message ${el.speaker}`}>{el.text}</div>
             ))}
           </div>
+          <div className="options">
+            {options.map((el) => (
+              <div className={`message option`}>{el.answer}</div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

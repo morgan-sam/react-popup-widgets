@@ -24,3 +24,9 @@
   background-color: rgb(118, 184, 206);
   color: white;
 }
+.option {
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid #666;
+  cursor: pointer;
+}
