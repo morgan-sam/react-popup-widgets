@@ -18,14 +18,20 @@ const Chatbot = (props) => {
   }, [open]);
   useEffect(() => setIncoming(currentChat.text), [currentChat]);
 
+  const shouldMessageSend = () => {
+    if (incoming.length === 0) return false;
+    else if (incoming[0].match("http") && lastActive > 0) return true;
+    else if (lastActive > incoming[0].length / 24) return true;
+    else return false;
+  };
+
   useEffect(() => {
-    if (incoming.length > 0 && lastActive > incoming[0].length / 18) {
+    const sendMessage = shouldMessageSend();
+    if (sendMessage) {
       setConversation((cur) => [...cur, { speaker: "bot", text: incoming[0] }]);
       setIncoming((cur) => cur.slice(1));
       setLastActive(0);
-    } else if (incoming.length === 0) {
-      setOptions(currentChat.options);
-    }
+    } else if (incoming.length === 0) setOptions(currentChat.options);
   }, [lastActive]);
 
   return (
