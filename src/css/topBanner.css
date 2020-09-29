@@ -30,6 +30,7 @@
   background-color: transparent;
   margin-right: 0.75rem;
   border: 1px solid white;
+  cursor: pointer;
 }
 
 .cross-line {
