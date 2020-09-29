@@ -57,7 +57,12 @@ const TimerPopup = (props) => {
           >
             {formatTime(timer)}
           </div>
-          <button className="signup-button">SIGN UP</button>
+          <button
+            className="signup-button"
+            onClick={() => (window.location.href = "/")}
+          >
+            SIGN UP
+          </button>
         </div>
       </div>
     </div>
