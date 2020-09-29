@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PopupHeader from "./PopupHeader.jsx";
 import "css/timerPopup.css";
 
-const COUNTDOWN_TIMER_LENGTH = 5;
+const COUNTDOWN_TIMER_LENGTH = 120;
 
 const TimerPopup = (props) => {
   const { open, header, closePopup } = props;
@@ -57,6 +57,7 @@ const TimerPopup = (props) => {
           >
             {formatTime(timer)}
           </div>
+          <button className="signup-button">SIGN UP</button>
         </div>
       </div>
     </div>
