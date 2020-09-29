@@ -15,3 +15,16 @@
 .final {
   color: red;
 }
+
+.very-last {
+  animation: pulse 0.66s infinite linear alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.3);
+  }
+}
