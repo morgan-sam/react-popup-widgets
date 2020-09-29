@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/sezzle-popup-widgets%20/static/css/main.0dba49b8.chunk.css",
+    "main.js": "/sezzle-popup-widgets%20/static/js/main.0dbdb96d.chunk.js",
+    "main.js.map": "/sezzle-popup-widgets%20/static/js/main.0dbdb96d.chunk.js.map",
+    "runtime-main.js": "/sezzle-popup-widgets%20/static/js/runtime-main.63ed5aac.js",
+    "runtime-main.js.map": "/sezzle-popup-widgets%20/static/js/runtime-main.63ed5aac.js.map",
+    "static/js/2.a736f543.chunk.js": "/sezzle-popup-widgets%20/static/js/2.a736f543.chunk.js",
+    "static/js/2.a736f543.chunk.js.map": "/sezzle-popup-widgets%20/static/js/2.a736f543.chunk.js.map",
+    "index.html": "/sezzle-popup-widgets%20/index.html",
+    "precache-manifest.19a1eb7f727d865809e14a53e2343b60.js": "/sezzle-popup-widgets%20/precache-manifest.19a1eb7f727d865809e14a53e2343b60.js",
+    "service-worker.js": "/sezzle-popup-widgets%20/service-worker.js",
+    "static/css/main.0dba49b8.chunk.css.map": "/sezzle-popup-widgets%20/static/css/main.0dba49b8.chunk.css.map",
+    "static/js/2.a736f543.chunk.js.LICENSE.txt": "/sezzle-popup-widgets%20/static/js/2.a736f543.chunk.js.LICENSE.txt",
+    "static/media/customer-service.svg": "/sezzle-popup-widgets%20/static/media/customer-service.0e0e8a17.svg",
+    "static/media/sezzle_logo.png": "/sezzle-popup-widgets%20/static/media/sezzle_logo.b0fe0998.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.63ed5aac.js",
+    "static/js/2.a736f543.chunk.js",
+    "static/css/main.0dba49b8.chunk.css",
+    "static/js/main.0dbdb96d.chunk.js"
+  ]
+}
