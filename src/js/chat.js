@@ -100,7 +100,6 @@ export const chatTree = {
                   answer: "A payment I made has not registered on my account.",
                   response: shopperSupportTeam,
                 },
-                ,
                 {
                   answer: "My issue isn't listed.",
                   response: shopperSupportTeam,
