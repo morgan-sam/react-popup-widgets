@@ -13,6 +13,7 @@ const Chatbot = (props) => {
   const [conversation, setConversation] = useState([]);
   const bottomOfChat = useRef(null);
   const { open, header, closePopup } = props;
+  console.log(open);
 
   const shouldMessageSend = () => {
     if (incoming.length === 0) return false;
@@ -65,7 +66,7 @@ const Chatbot = (props) => {
   ]);
 
   return (
-    <div className="corner-container bottom-left open">
+    <div className={`corner-container bottom-left ${open ? "open" : ""}`}>
       <div className={`chatbot popup ${open ? "open" : ""}`}>
         <PopupHeader {...{ header, closePopup }} />
         <div className="body">
