@@ -2,7 +2,7 @@ import React from "react";
 import "css/titleTray.css";
 import ToggleButton from "components/ToggleButton.jsx";
 import logo from "img/sezzle_logo.png";
-import Dial from "components/Dial";
+import QuarterMoon from "components/QuarterMoon";
 
 const TitleTray = (props) => {
   const { darkTheme, setDarkTheme } = props;
@@ -16,7 +16,7 @@ const TitleTray = (props) => {
         />
       </div>
       <img src={logo} className="logo" />
-      <Dial />
+      <QuarterMoon />
     </div>
   );
 };

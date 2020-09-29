@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "css/dial.css";
 
-const Dial = () => {
+const QuarterMoon = () => {
   const [quad, setQuad] = useState(0);
   return (
     <div
@@ -18,4 +18,4 @@ const Dial = () => {
   );
 };
 
-export default Dial;
+export default QuarterMoon;
