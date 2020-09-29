@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "css/app.css";
 import "css/containers.css";
 
-import TitleTray from "./TitleTray";
+import TitleTray from "components/TitleTray";
 
 import BottomRightPopup from "components/BottomRightPopup.jsx";
 import TopBanner from "components/TopBanner.jsx";

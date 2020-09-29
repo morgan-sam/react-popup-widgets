@@ -2,6 +2,7 @@ import React from "react";
 import "css/titleTray.css";
 import ToggleButton from "components/ToggleButton.jsx";
 import logo from "img/sezzle_logo.png";
+import Dial from "components/Dial";
 
 const TitleTray = (props) => {
   const { darkTheme, setDarkTheme } = props;
@@ -15,13 +16,7 @@ const TitleTray = (props) => {
         />
       </div>
       <img src={logo} className="logo" />
-      <div className="darktheme-container">
-        <div className="darktheme-label">Dark Theme</div>
-        <ToggleButton
-          active={darkTheme}
-          onClick={() => setDarkTheme(!darkTheme)}
-        />
-      </div>
+      <Dial />
     </div>
   );
 };
