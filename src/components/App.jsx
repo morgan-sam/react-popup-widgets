@@ -8,6 +8,7 @@ import TitleTray from "./TitleTray";
 import BottomRightPopup from "components/BottomRightPopup.jsx";
 import TopBanner from "components/TopBanner.jsx";
 import OverlayPopup from "components/OverlayPopup.jsx";
+import TimerPopup from "components/TimerPopup.jsx";
 import Chatbot from "components/Chatbot.jsx";
 
 import { toggleDarkTheme } from "js/utility";
@@ -27,6 +28,11 @@ const widgets = [
     component: OverlayPopup,
     label: "Overlay",
     description: "A popup that appears with a dark overlay across the screen.",
+  },
+  {
+    component: TimerPopup,
+    label: "Timer",
+    description: "A popup with a countdown timer.",
   },
   {
     component: Chatbot,
