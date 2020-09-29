@@ -18,7 +18,7 @@ const TimerPopup = (props) => {
   }, [open]);
 
   useEffect(() => {
-    if (timer === 1) return () => clearInterval(timerID);
+    if (timer === 0) clearInterval(timerID);
   }, [timer]);
 
   const intToTwoDecimals = (num) =>
