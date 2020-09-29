@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import PopupHeader from "./PopupHeader.jsx";
 
+const COUNTDOWN_TIMER_LENGTH = 300;
+
 const TimerPopup = (props) => {
   const { open, header, closePopup } = props;
-  const [timer, setTimer] = useState(300);
+  const [timer, setTimer] = useState(COUNTDOWN_TIMER_LENGTH);
 
   useEffect(() => {
     if (open) {
       const id = setInterval(() => setTimer((time) => time - 1), 1000);
       return () => clearInterval(id);
-    } else setTimer(300);
+    } else setTimer(COUNTDOWN_TIMER_LENGTH);
   }, [open]);
 
   const intToTwoDecimals = (num) =>
