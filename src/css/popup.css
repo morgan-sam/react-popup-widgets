@@ -1,4 +1,6 @@
 .popup {
+  max-width: 100vw;
+  max-height: 100vh;
   background-color: var(--background-color);
   margin: 2rem;
   transform: translateY(100%);
