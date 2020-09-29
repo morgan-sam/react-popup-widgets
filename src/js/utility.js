@@ -6,7 +6,6 @@ export const toggleDarkTheme = (darkTheme) => {
     root.style.setProperty("--banner-color", "rgb(194, 112, 11)");
     root.style.setProperty("--shadow-color", "#111");
     root.style.setProperty("--text-color", "white");
-    console.log(root.style);
   } else {
     root.style.setProperty("--background-color", "white");
     root.style.setProperty("--popup-header-color", "rgb(58, 12, 58)");

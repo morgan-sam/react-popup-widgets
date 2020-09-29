@@ -13,7 +13,6 @@ const Chatbot = (props) => {
   const [conversation, setConversation] = useState([]);
   const bottomOfChat = useRef(null);
   const { open, header, closePopup } = props;
-  console.log(open);
 
   const shouldMessageSend = () => {
     if (incoming.length === 0) return false;
