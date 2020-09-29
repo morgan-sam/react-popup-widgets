@@ -1,0 +1,13 @@
+.timer-popup {
+  width: fit-content;
+}
+
+.countdown-text {
+  margin: 1rem;
+  font-size: 1.2rem;
+}
+
+.countdown {
+  margin: 1.2rem;
+  font-size: 2rem;
+}
