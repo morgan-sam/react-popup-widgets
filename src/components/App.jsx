@@ -72,7 +72,7 @@ function App() {
           <div>{widgets[i].description}</div>,
           React.createElement(widgets[i].component, {
             open: widgetsOpen[i],
-            header: `Popup #${i + 1}`,
+            header: widgets[i].label,
             text:
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, minus.",
             closePopup: () => togglePopup(i),
