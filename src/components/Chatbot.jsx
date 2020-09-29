@@ -75,17 +75,25 @@ const Chatbot = (props) => {
               let convoElements = [];
               if (i === 0 || conversation[i - 1].speaker !== "bot")
                 convoElements.push(
-                  <div className="chat-name">SezzleSupport</div>
+                  <div key={`name-${i}`} className="chat-name">
+                    SezzleSupport
+                  </div>
                 );
               if (el.text.match("http"))
                 convoElements.push(
-                  <a href={el.text} className={`message ${el.speaker}`}>
+                  <a
+                    key={`link-${i}`}
+                    href={el.text}
+                    className={`message ${el.speaker}`}
+                  >
                     {el.text}
                   </a>
                 );
               else
                 convoElements.push(
-                  <div className={`message ${el.speaker}`}>{el.text}</div>
+                  <div key={`msg-${i}`} className={`message ${el.speaker}`}>
+                    {el.text}
+                  </div>
                 );
               return convoElements;
             })}
@@ -93,8 +101,9 @@ const Chatbot = (props) => {
           </div>
           {options && incoming.length === 0 && (
             <div className="options">
-              {options.map((el) => (
+              {options.map((el, i) => (
                 <button
+                  key={`option-${i}`}
                   className={`message option`}
                   onClick={() => userSelectOption(el)}
                 >
