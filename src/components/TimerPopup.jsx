@@ -63,7 +63,7 @@ const TimerPopup = (props) => {
           </div>
           <button
             className="signup-button"
-            onClick={() => (window.location.href = "/")}
+            onClick={() => window.location.reload()}
           >
             SIGN UP
           </button>
