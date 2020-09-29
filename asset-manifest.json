@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/sezzle-popup-widgets/static/css/main.0dba49b8.chunk.css",
+    "main.css": "/sezzle-popup-widgets/static/css/main.429b222d.chunk.css",
     "main.js": "/sezzle-popup-widgets/static/js/main.03735e3b.chunk.js",
     "main.js.map": "/sezzle-popup-widgets/static/js/main.03735e3b.chunk.js.map",
     "runtime-main.js": "/sezzle-popup-widgets/static/js/runtime-main.d112266e.js",
@@ -8,9 +8,9 @@
     "static/js/2.a736f543.chunk.js": "/sezzle-popup-widgets/static/js/2.a736f543.chunk.js",
     "static/js/2.a736f543.chunk.js.map": "/sezzle-popup-widgets/static/js/2.a736f543.chunk.js.map",
     "index.html": "/sezzle-popup-widgets/index.html",
-    "precache-manifest.86791ade258b989a496599f73548c3ea.js": "/sezzle-popup-widgets/precache-manifest.86791ade258b989a496599f73548c3ea.js",
+    "precache-manifest.656447d1ba0ef5d2bb5df3f14bcd4f55.js": "/sezzle-popup-widgets/precache-manifest.656447d1ba0ef5d2bb5df3f14bcd4f55.js",
     "service-worker.js": "/sezzle-popup-widgets/service-worker.js",
-    "static/css/main.0dba49b8.chunk.css.map": "/sezzle-popup-widgets/static/css/main.0dba49b8.chunk.css.map",
+    "static/css/main.429b222d.chunk.css.map": "/sezzle-popup-widgets/static/css/main.429b222d.chunk.css.map",
     "static/js/2.a736f543.chunk.js.LICENSE.txt": "/sezzle-popup-widgets/static/js/2.a736f543.chunk.js.LICENSE.txt",
     "static/media/customer-service.svg": "/sezzle-popup-widgets/static/media/customer-service.0e0e8a17.svg",
     "static/media/sezzle_logo.png": "/sezzle-popup-widgets/static/media/sezzle_logo.b0fe0998.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.d112266e.js",
     "static/js/2.a736f543.chunk.js",
-    "static/css/main.0dba49b8.chunk.css",
+    "static/css/main.429b222d.chunk.css",
     "static/js/main.03735e3b.chunk.js"
   ]
 }

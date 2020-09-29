@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6a8aa2caefbec97875ad26d4af6abc63",
+    "revision": "ed8b2432d2e79572ae644586070b7991",
     "url": "/sezzle-popup-widgets/index.html"
   },
   {
-    "revision": "946c9b47a65a7dafc749",
-    "url": "/sezzle-popup-widgets/static/css/main.0dba49b8.chunk.css"
+    "revision": "d5c1759236be5703eb22",
+    "url": "/sezzle-popup-widgets/static/css/main.429b222d.chunk.css"
   },
   {
     "revision": "fa9ad62c5ad3f2cceed5",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sezzle-popup-widgets/static/js/2.a736f543.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "946c9b47a65a7dafc749",
+    "revision": "d5c1759236be5703eb22",
     "url": "/sezzle-popup-widgets/static/js/main.03735e3b.chunk.js"
   },
   {
