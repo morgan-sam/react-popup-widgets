@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "css/chatbot.css";
 import PopupHeader from "components/PopupHeader";
 import TypingAnimation from "components/TypingAnimation";
@@ -11,6 +11,7 @@ const Chatbot = (props) => {
   const [incoming, setIncoming] = useState(chatTree.text);
   const [options, setOptions] = useState([]);
   const [conversation, setConversation] = useState([]);
+  const bottomOfChat = useRef(null);
   const { open, header, closePopup } = props;
 
   const shouldMessageSend = () => {
@@ -57,6 +58,11 @@ const Chatbot = (props) => {
     if (sendMessage) botSendMessage();
     else if (incoming.length === 0) setOptions(currentChat.options);
   }, [lastActive]);
+
+  useEffect(() => bottomOfChat.current.scrollIntoView(), [
+    conversation,
+    options,
+  ]);
 
   return (
     <div className="corner-container bottom-left open">
@@ -105,6 +111,7 @@ const Chatbot = (props) => {
               Reset Assistant
             </button>
           )}
+          <div ref={bottomOfChat}></div>
         </div>
       </div>
     </div>
