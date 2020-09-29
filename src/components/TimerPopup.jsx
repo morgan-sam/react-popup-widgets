@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PopupHeader from "./PopupHeader.jsx";
 import "css/timerPopup.css";
+import { closeIfClickedOutside } from "js/popup";
 
 const COUNTDOWN_TIMER_LENGTH = 120;
 
@@ -40,7 +41,10 @@ const TimerPopup = (props) => {
   };
 
   return (
-    <div className={`overlay-popup-container ${open ? "open" : ""}`}>
+    <div
+      className={`overlay-popup-container ${open ? "open" : ""}`}
+      onClick={(e) => closeIfClickedOutside(e, open, closePopup, "timer-popup")}
+    >
       <div className={`timer-popup popup ${open ? "open" : ""}`}>
         <PopupHeader {...{ header, closePopup }} />
         <div className="body">
