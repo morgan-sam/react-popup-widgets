@@ -15,13 +15,13 @@
   text-align: center;
   text-decoration: underline;
   font-size: 2rem;
-  margin: 2rem;
+  margin: 6rem 0 2rem 0;
 }
 
 .widget-info {
   display: grid;
   grid-template-columns: 10rem 1fr;
-  grid-gap: 1.4rem;
+  grid-gap: 2rem;
   align-items: center;
   margin: 2rem;
 }
