@@ -1,7 +1,9 @@
 .title-tray {
   display: flex;
   width: fit-content;
+  align-items: center;
   justify-content: space-around;
+  user-select: none;
 }
 
 .title-tray > * {
@@ -9,9 +11,9 @@
 }
 
 .logo {
-  margin-bottom: 2rem;
   width: 5rem;
   height: 5rem;
+  transition: 0.5s ease-out;
 }
 
 .darktheme-container {

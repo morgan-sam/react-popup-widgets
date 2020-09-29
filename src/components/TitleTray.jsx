@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "css/titleTray.css";
 import ToggleButton from "components/ToggleButton.jsx";
 import logo from "img/sezzle_logo.png";
 import QuarterMoon from "components/QuarterMoon";
 
 const TitleTray = (props) => {
+  const [quad, setQuad] = useState(0);
   const { darkTheme, setDarkTheme } = props;
   return (
     <div className="title-tray">
@@ -15,8 +16,12 @@ const TitleTray = (props) => {
           onClick={() => setDarkTheme(!darkTheme)}
         />
       </div>
-      <img src={logo} className="logo" />
-      <QuarterMoon />
+      <img
+        src={logo}
+        className="logo"
+        style={{ filter: `hue-rotate(${90 * quad}deg)` }}
+      />
+      <QuarterMoon {...{ quad, setQuad }} />
     </div>
   );
 };

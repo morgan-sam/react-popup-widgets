@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import "css/dial.css";
 
 const colors = ["#F77275", "#F9B835", "#3CD2A1", "#AA49CF"];
 
-const QuarterMoon = () => {
-  const [quad, setQuad] = useState(0);
+const QuarterMoon = (props) => {
+  const { quad, setQuad } = props;
   return (
     <div
       className="dial"
