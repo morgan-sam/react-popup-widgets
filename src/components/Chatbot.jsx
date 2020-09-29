@@ -69,7 +69,7 @@ const Chatbot = (props) => {
       <div className={`chatbot popup ${open ? "open" : ""}`}>
         <PopupHeader {...{ header, closePopup }} />
         <div className="body">
-          <img src={icon} className="chatbot-icon" />
+          <img src={icon} className="chatbot-icon" alt="sezzle-chatbot-icon" />
           <div className="conversation">
             {conversation.map((el, i) => {
               let convoElements = [];
