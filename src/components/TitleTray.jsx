@@ -19,6 +19,7 @@ const TitleTray = (props) => {
       <img
         src={logo}
         className="logo"
+        alt="sezzle-logo"
         style={{ filter: `hue-rotate(${90 * quad}deg)` }}
       />
       <QuarterMoon {...{ quad, setQuad }} />
