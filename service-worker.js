@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sezzle-popup-widgets/precache-manifest.35ecd9c2a9fa6603f978016d426cf1c8.js"
+  "/sezzle-popup-widgets/precache-manifest.937c01df9b8e673f5a87ad757e50d069.js"
 );
 
 self.addEventListener('message', (event) => {
