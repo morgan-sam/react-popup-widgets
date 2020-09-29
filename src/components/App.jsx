@@ -64,13 +64,15 @@ function App() {
       <div className="widget-info">
         {[...Array(widgets.length).keys()].map((i) => [
           <button
+            key={`button-${i}`}
             className={`btn ${widgetsOpen[i] ? "enabled" : ""}`}
             onClick={() => togglePopup(i)}
           >
             {widgets[i].label}
           </button>,
-          <div>{widgets[i].description}</div>,
+          <div key={`description-${i}`}>{widgets[i].description}</div>,
           React.createElement(widgets[i].component, {
+            key: `widget-${i}`,
             open: widgetsOpen[i],
             header: widgets[i].label,
             text:
