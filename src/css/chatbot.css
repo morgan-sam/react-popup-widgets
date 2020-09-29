@@ -29,6 +29,8 @@
 
 .message {
   width: fit-content;
+  max-width: 90%;
+  word-wrap: break-word;
   text-align: left;
   padding: 0.25rem 0.5rem;
   border-radius: 10px;
